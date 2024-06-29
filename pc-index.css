@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+@media (min-width: 834px) {}
+
+@media (min-width: 1200px) {
+    /***** header *****/
+    /***** main *****/
+    .main::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        height: 100%; width: 40%;
+        top: auto;
+        bottom: 0;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+    }
+    .main-bg img {
+        height: 55vw; width: 100%;
+    }
+    .main .main-text {
+        top: 35%;
+    }
+    .main-text h1 {
+        font-size: 4.5vw;
+    }
+    .main-text p {
+        font-size: 1.7vw;
+    }
+
+    /* intro */
+    .intro img {
+        width: 20vw;
+    }
+}
