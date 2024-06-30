@@ -3,34 +3,292 @@
 @media (min-width: 834px) {}
 
 @media (min-width: 1200px) {
+
     /***** header *****/
     /***** main *****/
+    .main {
+        width: 100%;
+        height: 100%;
+    }
+
     .main::after {
         content: "";
         position: absolute;
         top: 0;
         left: 0;
         z-index: 1;
-        height: 100%; width: 40%;
+        height: 100%;
+        width: 40%;
         top: auto;
         bottom: 0;
         background: linear-gradient(to right, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
     }
-    .main-bg img {
-        height: 55vw; width: 100%;
+
+    .main-bg .main-bg-wrap {
+        /* width: 100%;
+        height: auto; */
+        /* overflow: hidden; */
     }
+
+    .main-bg .main-bg-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
     .main .main-text {
         top: 35%;
     }
+
     .main-text h1 {
         font-size: 4.5vw;
     }
+
     .main-text p {
         font-size: 1.7vw;
     }
 
     /* intro */
+    .intro {
+        margin-top: 10.5vw;
+        background: url(./images/intro1.png) no-repeat left 8% / 20vw;
+    }
+
     .intro img {
+        width: 15vw;
+    }
+
+    .intro h3 {
+        font-size: 3vw;
+        margin-bottom: 1.3vw;
+    }
+
+    .intro p {
+        font-size: 1.1rem;
+        margin-bottom: 2.1vw;
+
+    }
+
+    .intro a {
+        min-height: 3.4vw;
+        padding: .8vw 4.2vw;
+        font-size: 1.1rem;
+    }
+
+    .intro .intro-video {
+        border-radius: 31.5vw;
+        clip-path: circle(100% at 50% 50%);
+        width: 89vw;
+        height: 50vw;
+        margin: 6.3vw auto 0;
+    }
+
+    .intro .intro-element {
+        bottom: -6vw;
+        right: 1vw;
+    }
+
+    /***** product *****/
+    .product {
+        padding-bottom: 13.6vw;
+    }
+
+    .product h1 {
+        font-size: 5.6vw;
+    }
+
+    .product p {
+        margin-top: 2.5vw;
+        text-align: center;
+        color: #222;
+        font-size: 1.1vw;
+    }
+
+    .product>a {
+        display: inline;
+        min-height: 3.4vw;
+        padding: .84vw 4.2vw;
+        font-size: 1.1vw;
+        line-height: 1.57;
+    }
+
+    .product ul {
+        margin-top: 6.3vw;
+    }
+
+    .product ul li {
         width: 20vw;
     }
+
+    .product ul li a img {
+        width: 50vw;
+    }
+
+    .product ul .drink1 .drink-img {
+        border-radius: 70%;
+        width: 20vw;
+        height: 20vw;
+        overflow: hidden;
+    }
+
+    .product ul .drink2 .drink-img {
+        width: 20vw;
+        height: 20vw;
+        overflow: hidden;
+    }
+
+    .product ul .drink3 .drink-img {
+        border-radius: 70%;
+        width: 20vw;
+        height: 20vw;
+        overflow: hidden;
+    }
+
+    .product ul .drink4 .drink-img {
+        clip-path: polygon(50% 0, 50% 0, 94% 25%, 94% 75%, 50% 100%, 50% 100%, 6% 75%, 6% 25%);
+        width: 20vw;
+        height: 20vw;
+        overflow: hidden;
+    }
+
+    .product ul .drink5 .drink-img {
+        border-radius: 70%;
+        width: 20vw;
+        height: 20vw;
+        overflow: hidden;
+    }
+
+    /***** archive *****/
+    .archive {
+        padding-bottom: 20vw;
+    }
+
+    .archive .archive-header h3 {
+        font-size: 3.2vw;
+        padding-bottom: 3.2vw;
+    }
+
+    .archive .archive-inner .archive-inner-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: flex;
+        transition-property: transform;
+        box-sizing: content-box;
+    }
+
+    .archive .archive-inner .archive-inner-item {
+        flex-shrink: 0;
+        width: calc(100% / 3);
+        height: 100%;
+        position: relative;
+        transition-property: transform;
+        margin-right: 0 auto;
+    }
+
+    .archive .archive-inner .archive-inner-item img {
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #000;
+    }
+
+    .archive .archive-inner .archive-inner-item .archive-info {
+        padding: 2.1vw;
+    }
+
+    .archive .archive-inner .archive-inner-item .archive-info p {
+        font-size: .9vw;
+        padding-left: 0;
+    }
+
+    .archive .archive-inner .archive-inner-item .archive-info h4 {
+        font-size: 1.1vw;
+        margin: .95vw 0;
+        padding-left: 0;
+        height: auto;
+    }
+
+    .archive .archive-inner .archive-inner-item .archive-info p:last-child {
+        color: #aaa;
+        font-size: .85vw;
+        padding-left: 0;
+    }
+
+    .archive .archive-inner .archive-inner-wrapper .info-des {
+        display: inherit;
+        height: 4vw;
+        word-break: keep-all;
+    }
+
+    /***** value *****/
+    .value {
+        text-align: left;
+    }
+
+    /***** green *****/
+    .value .value-green-box {
+        position: relative;
+        flex-direction: inherit;
+        justify-content: space-between;
+        width: 89.4vw;
+        height: 50.5vw;
+    }
+
+    .value .value-green-box .green-des {
+        flex: 1 1;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        padding: 0 0 0 8.0441640379vw;
+    }
+
+    .value .green-des::before {
+        display: none;
+    }
+
+    .value .green-des h3 {
+        font-size: 3.8vw;
+        line-height: 1.33;
+    }
+
+    .value .green-des p {
+        margin: 1.3vw 0 0 0;
+        color: #222;
+        font-size: 1.1vw;
+    }
+
+    .value .green-des .green-des-pc {
+        display: inherit;
+    }
+
+    .value .green-des .green-des-btn {
+        min-height: 2.9968454259vw;
+        font-size: 1.1041009464vw;
+        line-height: 1.57;
+        padding: .6vw 3.2vw;
+        margin-top: 2vw;
+    }
+
+    .value .value-green-box .green-img .green-img-box1 {
+        display: flex;
+        flex-direction: column;
+        width: 20vw;
+    }
+
+    .value .green-img-box1 span img {
+        margin-top: 1vw;
+    }
+
+    .value .value-green-box .green-img .green-img-box2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 20vw;
+        margin-left: 1vw;
+    }
+
+    .value .green-img-box2 span img {}
 }
