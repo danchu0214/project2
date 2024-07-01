@@ -24,12 +24,6 @@
         background: linear-gradient(to right, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
     }
 
-    .main-bg .main-bg-wrap {
-        /* width: 100%;
-        height: auto; */
-        /* overflow: hidden; */
-    }
-
     .main-bg .main-bg-wrap img {
         width: 100%;
         height: 100%;
@@ -42,10 +36,16 @@
 
     .main-text h1 {
         font-size: 4.5vw;
+        padding: 0 10% 3%;
     }
 
     .main-text p {
         font-size: 1.7vw;
+        padding: 0 10% 3%;
+        margin-bottom: 3%;
+    }
+    .main a {
+        margin: 0 10%;
     }
 
     /* intro */
@@ -233,6 +233,7 @@
         justify-content: space-between;
         width: 89.4vw;
         height: 50.5vw;
+        padding-bottom: 0;
     }
 
     .value .value-green-box .green-des {
@@ -289,6 +290,250 @@
         width: 20vw;
         margin-left: 1vw;
     }
+     /***** yellow *****/
+     .value .value-yellow-box {
+        position: relative;
+        flex-direction: inherit;
+        justify-content: space-between;
+        width: 89.4vw;
+        height: 50.5vw;
+        padding-bottom: 0;
+    }
 
-    .value .green-img-box2 span img {}
+    .value .value-yellow-box .yellow-des {
+        flex: 1 1;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        padding: 0 0 0 8.0441640379vw;
+    }
+
+    .value .yellow-des::before {
+        display: none;
+    }
+
+    .value .yellow-des h3 {
+        font-size: 3.8vw;
+        line-height: 1.33;
+    }
+
+    .value .yellow-des p {
+        margin: 1.3vw 0 0 0;
+        color: #222;
+        font-size: 1.1vw;
+    }
+
+    .value .yellow-des .yellow-des-pc {
+        display: inherit;
+    }
+
+    .value .yellow-des .yellow-des-btn {
+        min-height: 2.9968454259vw;
+        font-size: 1.1041009464vw;
+        line-height: 1.57;
+        padding: .6vw 3.2vw;
+        margin-top: 2vw;
+    }
+
+    .value .value-yellow-box .yellow-img .yellow-img-box1 {
+        display: flex;
+        flex-direction: column;
+        width: 20vw;
+    }
+
+    .value .yellow-img-box1 span img {
+        margin-top: 1vw;
+    }
+
+    .value .value-yellow-box .yellow-img .yellow-img-box2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 20vw;
+        margin-left: 1vw;
+    }
+    /* orange */
+       .value .value-orange-box {
+        position: relative;
+        flex-direction: inherit;
+        justify-content: space-between;
+        width: 89.4vw;
+        height: 50.5vw;
+        padding-bottom: 0;
+    }
+
+    .value .value-orange-box .orange-des {
+        flex: 1 1;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        padding: 0 0 0 8.0441640379vw;
+    }
+
+    .value .orange-des::before {
+        display: none;
+    }
+
+    .value .orange-des h3 {
+        font-size: 3.8vw;
+        line-height: 1.33;
+    }
+
+    .value .orange-des p {
+        margin: 1.3vw 0 0 0;
+        color: #222;
+        font-size: 1.1vw;
+    }
+
+    .value .orange-des .orange-des-pc {
+        display: inherit;
+    }
+
+    .value .orange-des .orange-des-btn {
+        min-height: 2.9968454259vw;
+        font-size: 1.1041009464vw;
+        line-height: 1.57;
+        padding: .6vw 3.2vw;
+        margin-top: 2vw;
+    }
+
+    .value .value-orange-box .orange-img .orange-img-box1 {
+        display: flex;
+        flex-direction: column;
+        width: 20vw;
+    }
+
+    .value .orange-img-box1 span img {
+        margin-top: 1vw;
+    }
+
+    .value .value-orange-box .orange-img .orange-img-box2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 20vw;
+        margin-left: 1vw;
+    }
+
+    /***** class *****/
+    .class {
+        display: flex;
+        padding: 10vw 2% 10vw 8%;
+    }
+    .class h2 {
+        font-size: 4.592vw;
+        margin-right: 5vw;
+    }
+    .class p {
+        display: none;
+    }
+    .class ul li {
+        height: 30.51vw;
+        margin-right: 2vw;
+    }
+    .class ul li:last-child {
+        margin: 0;
+    }
+    .class ul li img {
+        width: 100%; height: 100%;
+        object-fit: cover;
+    }
+    .class ul li p {
+        display: inherit;
+        font-size: 1.1vw;
+        text-align: left;
+        margin-top: 1vw;
+    }
+    /* space */
+    .space {
+        background: url(./images/space-bg.png) no-repeat center center / cover;
+        text-align: left;
+        padding: 0 10%;
+        position: relative;
+    }
+    .space .space-time {
+        padding: 0;
+    }
+    .space .space-des h2 {
+        font-size: 4.592vw;
+        padding: 5vw 0 3vw ;
+    }
+    .space .address {
+        font-size: 1.1vw;
+        padding-bottom: 2.857vw;
+    }
+    .space .space-title {
+        padding-bottom: 0.765vw;
+    }
+    .space .space-time p:nth-child(3) {
+        padding-bottom: 2.551vw;
+    }
+    .space .space-time p:last-child {
+        padding-bottom: 3.061vw;
+    }
+    .space .space-button {
+        padding-bottom: 25.51vw;
+    }
+    .space a {
+        display: inline;
+        margin: 0;
+        padding: 1vw 4vw;
+    }
+    .space .space-img {
+        display: inherit;
+        width: 43.265vw; height: 25.51vw;
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+    }
+    .space .space-img img {
+        width: 100%; height: 100%;
+        object-fit: cover;
+    }
+    /***** footer *****/
+    footer {
+        padding: 8.571vw 8.265vw 5.357vw;
+    }
+    footer .footer-wrapper img {
+        width: 6.531vw;
+    }
+    footer .footer-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    footer .footer-wrapper-flex {
+        display: flex;
+        justify-content: space-between;
+        gap: 8.571vw;
+    }
+    footer .footer-box h5{
+        padding-bottom: 1.531vw;
+    }
+    footer .footer-box p {
+        padding-bottom: 1.531vw;
+    }
+    footer .footer-box .footer-space {
+        padding-bottom: 1.531vw;
+    }
+    footer .footer-icon {
+        display: flex;
+        flex-basis: content;
+        gap: 3.061vw;
+    }
+    footer .footer-icon a {
+        width: 1.276vw; height: 1.276vw;
+    }
+    footer .footer-icon img {
+        width: 100%; height: 100%;
+        object-fit: cover;
+    }
+    footer .footer-copyright {
+        padding-top: 5.357vw;
+    }
 }
