@@ -16,21 +16,23 @@
     <header>
         <img src="./images/한글로고.png" alt="로고" class="pc-logo">
         <img src="./images/원형로고.png" alt="원형로고" class="round-logo">
-        <ul class="header-list">
-            <li>About</li>
-            <li>Product</li>
-            <li>Class</li>
-            <li>Space</li>
-            <li>Archive</li>
-            <li>Contact</li>
-        </ul>
-        <div class="header">
-            <div>Login</div>
-            <ul>
-                <li>Kr</li>
-                <li>Eng</li>
+        <div class="header-flex">
+            <ul class="header-list">
+                <li>About</li>
+                <li>Product</li>
+                <li>Class</li>
+                <li>Space</li>
+                <li>Archive</li>
+                <li>Contact</li>
             </ul>
-            <a href="#">스토어 바로가기</a>
+            <div class="header">
+                <div>Login</div>
+                <ul>
+                    <li>Kr</li>
+                    <li>Eng</li>
+                </ul>
+                <a href="#">스토어 바로가기</a>
+            </div>
         </div>
     </header>
     <main>
@@ -71,53 +73,56 @@
             <h1>JEJU LOCAL DRINKS</h1>
             <p>제주의 농산물을 담은 전통주를 만나보세요.</p>
             <a href="#">View All</a>
-            <ul>
-                <li class="drink1"><a href="#">
-                        <div class="drink-img">
-                            <img src="./images/drink1.png" alt="drink1">
-                        </div>
-                        <div class="drink-text">
-                            <p>ALC 16% 375ml</p>
-                            <p>제주메밀 맑은술</p>
-                        </div>
-                    </a></li>
-                <li class="drink2"><a href="#">
-                        <div class="drink-img">
-                            <img src="./images/drink2.png" alt="drink2">
-                        </div>
-                        <div class="drink-text">
-                            <p>ALC 8% 600ml</p>
-                            <p>만다린 탁주</p>
-                        </div>
-                    </a></li>
-                <li class="drink3"><a href="#">
-                        <div class="drink-img">
-                            <img src="./images/drink3.png" alt="drink3">
-                        </div>
-                        <div class="drink-text">
-                            <p>ALC 8% 600ml</p>
-                            <p>천혜향 탁주</p>
-                        </div>
-                    </a></li>
-                <li class="drink4"><a href="#">
-                        <div class="drink-img">
-                            <img src="./images/drink4.png" alt="drink4">
-                        </div>
-                        <div class="drink-text">
-                            <p>ALC 12% 375ml</p>
-                            <p>만다린 약주</p>
-                        </div>
-                    </a></li>
-                <li class="drink5"><a href="#">
-                        <div class="drink-img">
-                            <img src="./images/drink1.png" alt="drink5">
-                        </div>
-                        <div class="drink-text">
-                            <p>ALC 16% 375ml</p>
-                            <p>제주메밀 맑은술</p>
-                        </div>
-                    </a></li>
-            </ul>
+            <div class="swiper mySwiper">
+                <ul class="swiper-wrapper">
+                    <li class="drink1 swiper-slide"><a href="#">
+                            <div class="drink-img">
+                                <img src="./images/drink1.png" alt="drink1">
+                            </div>
+                            <div class="drink-text">
+                                <p>ALC 16% 375ml</p>
+                                <p>제주메밀 맑은술</p>
+                            </div>
+                        </a></li>
+                    <li class="drink2 swiper-slide"><a href="#">
+                            <div class="drink-img">
+                                <img src="./images/drink2.png" alt="drink2">
+                            </div>
+                            <div class="drink-text">
+                                <p>ALC 8% 600ml</p>
+                                <p>만다린 탁주</p>
+                            </div>
+                        </a></li>
+                    <li class="drink3"><a href="#">
+                            <div class="drink-img">
+                                <img src="./images/drink3.png" alt="drink3">
+                            </div>
+                            <div class="drink-text">
+                                <p>ALC 8% 600ml</p>
+                                <p>천혜향 탁주</p>
+                            </div>
+                        </a></li>
+                    <li class="drink4 swiper-slide"><a href="#">
+                            <div class="drink-img">
+                                <img src="./images/drink4.png" alt="drink4">
+                            </div>
+                            <div class="drink-text">
+                                <p>ALC 12% 375ml</p>
+                                <p>만다린 약주</p>
+                            </div>
+                        </a></li>
+                    <li class="drink5 swiper-slide"><a href="#">
+                            <div class="drink-img">
+                                <img src="./images/drink1.png" alt="drink5">
+                            </div>
+                            <div class="drink-text">
+                                <p>ALC 16% 375ml</p>
+                                <p>제주메밀 맑은술</p>
+                            </div>
+                        </a></li>
+                </ul>
+                <div class="swiper-pagination"></div>
+            </div>
         </section>
         <!-- archive -->
         <section class="archive">
@@ -375,6 +380,18 @@
     </footer>
 
     <script src="./assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    </script>
 </body>
 
 </html>

@@ -23,9 +23,15 @@ body {
 
 /***** header *****/
 header {
-    /* display: flex; */
+    display: flex;
     position: fixed;
-    display: none;
+    z-index: 1;
+    /* display: none; */
+}
+
+header .round-logo {
+    width: 9.132vw;
+    height: 9.132vw;
 }
 
 header .pc-logo {

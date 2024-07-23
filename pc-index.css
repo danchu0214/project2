@@ -5,6 +5,87 @@
 @media (min-width: 1200px) {
 
     /***** header *****/
+    header {
+        margin: 1vw auto;
+        background-color: #fff;
+        width: 90vw;
+        justify-content: space-between;
+        align-items: center;
+        left: 50%;
+        transform: translate(-50%, 0);
+        border-radius: 50px;
+        padding: .8vw 2vw;
+    }
+
+    header .round-logo {
+        display: none;
+    }
+
+    header .pc-logo {
+        display: block;
+        width: 136px;
+        height: 42px;
+    }
+
+    header .header-flex {
+        display: flex;
+        flex: 1 1;
+        justify-content: space-between;
+    }
+
+    header .header-list {
+        flex-direction: row;
+        padding-left: 6vw;
+        align-items: center;
+    }
+
+    header .header-list li:first-child {
+        margin: 0;
+    }
+
+    header .header-list li {
+        margin-left: 1.3vw;
+    }
+
+    header .header {
+        align-items: center;
+    }
+
+    header .header div {
+        padding: 0 10px;
+    }
+
+    header .header ul li {
+        margin-left: 6px;
+        padding-left: 17px;
+    }
+
+    header .header a {
+        margin: 1px 0 1px 24px;
+        background-color: #000;
+        color: #fff;
+
+        width: 191px;
+        height: 48px;
+
+        text-align: center;
+        line-height: 48px;
+        border-radius: 5.2vw;
+    }
+
+    /* header .header ul li:first-child::after {
+        content: "";
+        width: 0px;
+        height: 0px;
+        border-right: 360px solid #666666;
+        border-top: 180px solid transparent;
+        border-bottom: 180px solid transparent;
+    } */
+
+    header .header ul li:last-child {
+        display: none;
+    }
+
     /***** main *****/
     .main {
         width: 100%;
@@ -42,10 +123,16 @@
 
     .main-text h1 {
         font-size: 4.5vw;
+        padding: 0 10% 3%;
     }
 
     .main-text p {
         font-size: 1.7vw;
+        padding: 0px 10% 6%;
+    }
+
+    .main a {
+        margin: 0 10%;
     }
 
     /* intro */
