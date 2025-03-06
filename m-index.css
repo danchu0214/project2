@@ -57,6 +57,7 @@ header .header {
 
 .main-bg {
     display: flex;
+    width: 100%;
 }
 
 .main-bg img {
