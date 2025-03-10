@@ -10,13 +10,15 @@
     <!-- 작성한 js -->
     <script src="./assets/js/jquery-3.7.1.min.js"></script>
     <script src="index.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- 작성한 css -->
     <link rel="stylesheet" href="./m-index.css">
     <link rel="stylesheet" href="./pc-index.css">
 </head>
 
 <body>
-    <header class="nav-down">
+    <header>
         <img src="./images/한글로고.png" alt="로고" class="pc-logo">
         <img src="./images/원형로고.png" alt="원형로고" class="round-logo">
         <div class="header-flex">
@@ -40,13 +42,20 @@
     </header>
     <main>
         <!-- main -->
-        <section class="main swiper mySwiper">
+        <section class="main swiper mySwiper-main">
             <div class="main-bg swiper-wrapper">
                 <div class="main-bg-wrap swiper-slide"><img src="./images/main-bg1.png" alt="bg1"></div>
-                <!-- <div class="main-bg-wrap"><img src="./images/main-bg2.png" alt="bg2"></div> -->
-                <!-- <div class="main-bg-wrap"><img src="./images/main-bg3.png" alt="bg3"></div> -->
-                <!-- <div class="main-bg-wrap"><img src="./images/main-bg4.png" alt="bg4"></div> -->
+                <div class="main-bg-wrap swiper-slide"><img src="./images/main-bg2.png" alt="bg2"></div>
+                <div class="main-bg-wrap swiper-slide"><img src="./images/main-bg3.png" alt="bg3"></div>
+                <div class="main-bg-wrap swiper-slide"><img src="./images/main-bg4.png" alt="bg4"></div>
             </div>
+
+            <!-- 페이지네이션 (점 표시) -->
+            <div class="swiper-pagination"></div>
+
+            <!-- 네비게이션 버튼 (이전/다음) -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
             <div class="main-text">
                 <h1>숲과 들이 전하는<br> 발효 라이프</h1>
                 <p>파치(못난이 농산물)에 발효 기술을 더해 제주도의 맛과 향을 담은 가향주를 빚습니다.<br><span>철마다 나는 제주도의 다양한 농산물을 활용한 전통주를 통해 제주도에 대한
@@ -76,7 +85,7 @@
             <h1>JEJU LOCAL DRINKS</h1>
             <p>제주의 농산물을 담은 전통주를 만나보세요.</p>
             <a href="#">View All</a>
-            <div class="swiper mySwiper">
+            <div class="swiper mySwiper-product">
                 <ul class="swiper-wrapper">
                     <li class="drink1 swiper-slide"><a href="#">
                             <div class="drink-img">
@@ -96,7 +105,7 @@
                                 <p>만다린 탁주</p>
                             </div>
                         </a></li>
-                    <li class="drink3"><a href="#">
+                    <li class="drink3 swiper-slide"><a href="#">
                             <div class="drink-img">
                                 <img src="./images/drink3.png" alt="drink3">
                             </div>
@@ -400,18 +409,6 @@
         </div>
         <p class="footer-copyright">2024 jejugottbatt .</p>
     </footer>
-
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            pagination: {
-                el: ".swiper-pagination",
-            },
-        });
-    </script>
 </body>
 
 </html>
