@@ -34,14 +34,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // ✅ product Swiper 설정 (스크롤로만 이동)
+    // var productSwiper = new Swiper(".mySwiper-product", {
+    //     loop: true, // 🔹 무한 반복 (drink5 → drink1)
+    //     slidesPerView: 1,
+    //     spaceBetween: 30,
+    //     mousewheel: true, /* 스크롤로만 이동 */
+    //     pagination: {
+    //         el: ".swiper-pagination",
+    //         clickable: true,
+    //     },
+    // });
+
     var productSwiper = new Swiper(".mySwiper-product", {
-        loop: true, // 🔹 무한 반복 (drink5 → drink1)
+        loop: true, // 무한 반복
         slidesPerView: 1,
         spaceBetween: 30,
-        mousewheel: true, /* 스크롤로만 이동 */
+        mousewheel: true, // 마우스 스크롤로만 이동
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
         },
+        loopAdditionalSlides: 1, // 🔹 추가 슬라이드 복제 (loop 버그 방지)
     });
+
 });

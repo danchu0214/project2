@@ -215,14 +215,14 @@
         line-height: 1.57;
     }
 
-    /* .mySwiper-product .swiper-wrapper {
+    .mySwiper-product .swiper-wrapper {
         display: flex;
     }
 
     .mySwiper-product .swiper-slide {
         width: 100%;
         flex-shrink: 0;
-    } */
+    }
 
 
     .product ul {
