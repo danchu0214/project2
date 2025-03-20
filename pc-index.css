@@ -227,11 +227,16 @@
 
     .product ul {
         margin-top: 6.3vw;
+        gap: 0;
     }
 
     .product ul li {
-        width: 20vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
+
 
     .product ul li a img {
         width: 50vw;
@@ -359,6 +364,13 @@
         font-size: .85vw;
         padding-left: 0;
     }
+
+    .archive .archive-inner-wrapper {
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+        /* 이동할 때 애니메이션 효과 */
+    }
+
 
     .archive .archive-inner .archive-inner-wrapper .info-des {
         display: inherit;

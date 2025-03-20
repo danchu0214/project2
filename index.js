@@ -33,28 +33,48 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
 
-    // ✅ product Swiper 설정 (스크롤로만 이동)
-    // var productSwiper = new Swiper(".mySwiper-product", {
-    //     loop: true, // 🔹 무한 반복 (drink5 → drink1)
-    //     slidesPerView: 1,
-    //     spaceBetween: 30,
-    //     mousewheel: true, /* 스크롤로만 이동 */
-    //     pagination: {
-    //         el: ".swiper-pagination",
-    //         clickable: true,
-    //     },
-    // });
-
     var productSwiper = new Swiper(".mySwiper-product", {
         loop: true, // 무한 반복
-        slidesPerView: 1,
-        spaceBetween: 30,
-        mousewheel: true, // 마우스 스크롤로만 이동
+        slidesPerView: 3, // 🔹 한 번에 3개씩 보이도록 설정
+        spaceBetween: 30, // 슬라이드 사이 간격
+        mousewheel: true, // 마우스 스크롤 이동
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
         },
-        loopAdditionalSlides: 1, // 🔹 추가 슬라이드 복제 (loop 버그 방지)
     });
+
+    document.querySelector('.btn-arrow-line.next').addEventListener('click', function (event) {
+        event.preventDefault(); // 기본 동작(링크 이동 등) 막기
+
+        // archive-inner-wrapper 이동 (오른쪽 화살표)
+        const wrapper = document.querySelector('.archive-inner-wrapper');
+        const itemWidth = document.querySelector('.archive-inner-item').offsetWidth;
+        const currentTransform = parseInt(getComputedStyle(wrapper).transform.split(',')[4]) || 0;
+
+        // 이동
+        const maxMove = -(wrapper.scrollWidth - wrapper.offsetWidth); // 최대로 이동할 거리
+        if (currentTransform > maxMove) {
+            wrapper.style.transition = 'transform 0.3s ease-in-out';
+            wrapper.style.transform = `translateX(${currentTransform - itemWidth}px)`;
+        }
+    });
+
+    document.querySelector('.btn-arrow-line').addEventListener('click', function (event) {
+        event.preventDefault(); // 기본 동작(링크 이동 등) 막기
+
+        // archive-inner-wrapper 이동 (왼쪽 화살표)
+        const wrapper = document.querySelector('.archive-inner-wrapper');
+        const itemWidth = document.querySelector('.archive-inner-item').offsetWidth;
+        const currentTransform = parseInt(getComputedStyle(wrapper).transform.split(',')[4]) || 0;
+
+        // 이동
+        if (currentTransform < 0) {
+            wrapper.style.transition = 'transform 0.3s ease-in-out';
+            wrapper.style.transform = `translateX(${currentTransform + itemWidth}px)`;
+        }
+    });
+
+
 
 });
