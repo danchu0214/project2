@@ -193,6 +193,7 @@
 
     /***** product *****/
     .product {
+        overflow: hidden;
         padding-bottom: 13.6vw;
     }
 
@@ -215,13 +216,22 @@
         line-height: 1.57;
     }
 
+    .mySwiper-product {
+        width: 100%;
+        /* 부모 요소를 넘지 않도록 설정 */
+        overflow: hidden;
+        /* 가로스크롤 방지 */
+    }
+
     .mySwiper-product .swiper-wrapper {
         display: flex;
+        width: 100%;
     }
 
     .mySwiper-product .swiper-slide {
         width: 100%;
         flex-shrink: 0;
+        flex: 0 0 auto;
     }
 
 
@@ -279,6 +289,7 @@
     /***** archive *****/
     .archive {
         padding-bottom: 20vw;
+        overflow: hidden;
     }
 
     .archive .archive-header {
@@ -335,6 +346,8 @@
         position: relative;
         transition-property: transform;
         margin-right: 0 auto;
+        box-sizing: border-box;
+        /* 패딩, 보더 포함하여 크기 조정 */
     }
 
     .archive .archive-inner .archive-inner-item img {
@@ -368,7 +381,9 @@
     .archive .archive-inner-wrapper {
         display: flex;
         transition: transform 0.3s ease-in-out;
-        /* 이동할 때 애니메이션 효과 */
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
     }
 
 
